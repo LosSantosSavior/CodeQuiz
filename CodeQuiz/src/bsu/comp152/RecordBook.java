@@ -3,7 +3,7 @@ package bsu.comp152;
 import java.util.ArrayList;
 
 public abstract class RecordBook {
-    private ArrayList<Contact> data;
+    protected ArrayList<Contact> data;
     protected String Label;
 
     public RecordBook(String bookName){

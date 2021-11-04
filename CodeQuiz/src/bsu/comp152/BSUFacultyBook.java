@@ -15,8 +15,8 @@ public class BSUFacultyBook extends RecordBook{
     }
 
     public void loadData() throws IOException {
-        var bsuFB = new BSUFacultyBook(Contact);
-        bsuFB =
+        var bsuFB = new BSUFacultyBook();
+        bsuFB = data.get();
         var fileName = "Contacts.txt";
         var filePath = Paths.get(fileName);
         var allLines = Files.readAllLines(filePath);
