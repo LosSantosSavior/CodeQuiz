@@ -1,6 +1,5 @@
 package bsu.comp152;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -16,15 +15,18 @@ public class BSUFacultyBook extends RecordBook{
     }
 
     public void loadData() throws IOException {
+        var bsuFB = new BSUFacultyBook(Contact);
+        bsuFB =
         var fileName = "Contacts.txt";
         var filePath = Paths.get(fileName);
         var allLines = Files.readAllLines(filePath);
         for (var line: allLines) {
             var splitLine = line.split(",");
-            Contact.add(splitLine[0]);
-            .add(Float.parseFloat(splitLine[1]));
-            //.add(Integer.parseInt(splitLine[2]));
+            //.add(splitLine[0]);
+            //.add((splitLine[1]));
+            //.add((splitLine[2]));
             //Contact contactLine = new Contact(RecordBook);
+
 
 
         }
@@ -44,14 +46,14 @@ public class BSUFacultyBook extends RecordBook{
     public void findContact(String name)  {
         var reader = new Scanner(System.in);
         var userResponse = reader.nextLine();
-        for (int i = 0; i < ; i++)    {
-            System.out.println("Name: " + .get(i) + "\nContact ID: " + .get(i) + "\nPhone Number: " + .get(i) + "\nNotes: " + .get(i));
+        for (int i = 0; i < name.length(); i++)    {
+            System.out.println("Name: " +.get(i) + "\nContact ID: " + .get(i) + "\nPhone Number: " + .get(i) + "\nNotes: " + .get(i));
         }
         while (!userResponse.equals("done"))    {
-            System.out.println("Type in the contact you want to look for.");
+            System.out.println("Type in the contact you want to look for. Type 'done' when you are done searching for a contact.");
             userResponse = reader.nextLine();
             userResponse = userResponse.toLowerCase();
-            for (int i = 0; i < .size(); i++) {
+            for (int i = 0; i < name.length(); i++) {
                 if (userResponse.equals(.get(i))) {
                     System.out.println();
                 }
